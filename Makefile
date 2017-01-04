@@ -8,7 +8,7 @@ all: osd
 	gcc -c -o $@ $< $(CPPFLAGS)
  
 
-osd: main.o frsky.o render.o telemetry.o ltm.o mavlink.o
+osd: main.o frsky.o render.o telemetry.o ltm.o mavlink.o altimu10v5.o
 	gcc -o $@ $^ $(LDFLAGS)
 
 

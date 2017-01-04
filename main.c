@@ -98,6 +98,8 @@ int main(int argc, char *argv[]) {
 			ltm_read(&td, buf, n);
 #elif defined(MAVLINK)
 			mavlink_read(&td, buf, n);
+#elif defined(ALTIMU10v5)
+			altimu10v5_read(&td, buf, n);
 #endif
 		}
 

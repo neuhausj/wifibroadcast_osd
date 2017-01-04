@@ -31,7 +31,7 @@ typedef struct {
 	float speed;
 	int16_t x, y, z;
 	int16_t ew, ns;
-#if defined(LTM) || defined(MAVLINK)
+#if defined(LTM) || defined(MAVLINK) || defined(ALTIMU10v5)
 	int16_t roll, pitch;
 	uint8_t rssi;
 	uint8_t airspeed;

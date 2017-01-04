@@ -171,7 +171,7 @@ void render(telemetry_data_t *td) {
 	paintAHI(INVERT_ROLL * TO_DEG * (atan(x_val / sqrt((y_val*y_val) + (z_val*z_val)))), INVERT_PITCH * TO_DEG * (atan(y_val / sqrt((x_val*x_val)+(z_val*z_val)))));
 		#endif // AHI ladder
 	#endif // EXCHANGE_ROLL_AND_PITCH
-#elif defined(LTM) || defined(MAVLINK)
+#elif defined(LTM) || defined(MAVLINK) || defined(ALTIMU10v5)
 	#if DRAW_AHI_LADDER == true
 	draw_horizon(INVERT_ROLL * td->roll, INVERT_PITCH * td->pitch, getWidth(50), getHeight(50), 1.5f);
 	#else
