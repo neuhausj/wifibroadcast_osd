@@ -55,8 +55,8 @@
  */
 //#define FRSKY
 //#define LTM
-#define MAVLINK
-//#define ALTIMU10v5
+//#define MAVLINK
+#define ALTIMU10V5
 
 /** RSSI **/
 //packet based rssi, uncomment to disable

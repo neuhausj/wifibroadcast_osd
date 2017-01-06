@@ -20,7 +20,7 @@ void telemetry_init(telemetry_data_t *td) {
 	td->z = 0;
 	td->ew = 0;
 	td->ns = 0;
-#ifdef LTM || ALTIMU10v5
+#if defined(LTM) || defined(ALTIMU10v5)
 	td->roll = 0;
 	td->pitch = 0;
 	td->rssi = 0;

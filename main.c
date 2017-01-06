@@ -43,6 +43,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "ltm.h"
 #elif defined(MAVLINK)
 #include "mavlink.h"
+#elif defined(ALTIMU10V5)
+#include "altimu10v5.h"
 #endif
 #include "render.h"
 #include <sys/types.h>
@@ -68,8 +70,11 @@ int main(int argc, char *argv[]) {
 	frsky_state_t fs;
 #endif
 	telemetry_data_t td;
+#if defined(ALTIMU10V5)
+	bcm_host_init();
+#else
 	telemetry_init(&td);
-
+#endif
 	render_init();
 
 	long long prev_time = current_timestamp();
@@ -98,7 +103,7 @@ int main(int argc, char *argv[]) {
 			ltm_read(&td, buf, n);
 #elif defined(MAVLINK)
 			mavlink_read(&td, buf, n);
-#elif defined(ALTIMU10v5)
+#elif defined(ALTIMU10V5)
 			altimu10v5_read(&td, buf, n);
 #endif
 		}
