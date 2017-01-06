@@ -1,3 +1,5 @@
+CAREFUL: WORK IN PROGRESS !!! NOT TESTED YET !!! DO NOT USE IT !!! 
+
 # Wifibroadcast OSD
 OSD for HD wireless FPV system based on wifibroadcast from befi
 
